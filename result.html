@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result of EasyStocks</title>
+    <link rel="stylesheet" href='/static/css/style.css' />
+    <link rel="icon" href="/favicon/stx.ico" />
+  </head>
+  <body>
+    <h2 align="center">Stock: {{ stockdata }}</h2>
+    <h3 align="left">Hay! Here is your Form</h3>
+    <footer>
+      <form action="{{ stock_url }}">
+        <input type="submit" value="Download the form" />
+    </form>
+    </footer>
+    {{ table|safe }}
+  </body>
+</html>

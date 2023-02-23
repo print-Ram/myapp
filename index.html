@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESF:Easy Stock Forms</title>
+    <link rel="stylesheet" href='/static/css/style.css' />
+    <link rel="icon" type="image" href="/favicon/stx.ico" />
+  </head>
+  <body style="background-color:rgba(228, 245, 243, 0.345)">
+    <h1><center>Easy Stock Forms</h1>
+    <p>About the web site :- </p>
+                      <p>The following form is used to download and view the data of any companies which you would like to know.</p>
+                      <p>The following are some of the popular symbols which you may not be aware of it.</p>
+                      <p>Symbols:</p>
+                      <p>1.Google - GOOG</p>
+                      <p>2.Netflix - NFLX</p>
+                      <p>3.Facebook - META and etc., choose one of your favourites one and roll on this website.</p>
+    <form id="stock-form" action="/get_stock_data" method="post" >
+      <label for="stockdata">Stock Symbol:</label>
+      <p><small>Give appropriate symbols of any Comapny</small></p>
+      <input type="text" placeholder="Enter as GOOG...." id="stockdata" name="stockdata"><br><br>
+      <label for="start_date">Start Date:</label>
+      <input type="date" id="start_date" name="start_date"><br><br>
+      <label for="end_date">End Date:</label>
+      <input type="date" id="end_date" name="end_date"><br><br>
+      <label for="interval">Interval:</label>
+      <select id="interval" name="interval">
+        <option value="1d">1 Day</option>
+        <option value="1wk">1 Week</option>
+        <option value="1mo">1 Month</option>
+      </select><br><br>
+      <label for="events">Events:</label>
+      <select id="events" name="events">
+        <option value="history">Historical Prices</option>
+        <option value="div">Dividends Only</option>
+        <option value="split">Splits Only</option>
+        <option value="div,split">Dividends and Splits</option>
+      </select><br><br>
+      <input type="submit" value="Get Stock Data">
+
+    </form>
+    <footer class="site-footer">
+      <div class="footer-secondary">
+        <p><center>Powered by</center></p>
+        <p class="footer-copyright"><center><a href="https://finance.yahoo.com/">Yahoo</a></center></p>
+      </div>
+    </footer>
+  </body>
+</html>
